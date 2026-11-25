@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.directors {
+  --directors-bg: #004047;
+  --directors-card: #012f34;
+  --directors-accent: #79c8c7;
+  --directors-coral: #f67e7e;
+  --directors-ring: #d8efee;
+
+  padding: 9rem 1rem 8.75rem;
+  background-color: var(--directors-bg);
+  color: #ffffff;
+}
+
+.directors__inner {
+  max-width: 1110px;
+  margin-inline: auto;
+}
+
+.directors__title {
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+  font-weight: var(--weight-bold);
+  color: #ffffff;
+  text-align: center;
+}
+
+.directors__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.875rem 1.875rem;
+  padding: 0;
+  list-style: none;
+}
+
+.director-card {
+  position: relative;
+  min-height: 254px;
+  padding: 2rem 1rem 0;
+  background-color: var(--directors-card);
+  text-align: center;
+}
+
+.director-card__photo {
+  width: 100px;
+  height: 100px;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  border: 3px solid var(--directors-ring);
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-gray-300);
+}
+
+.director-card__name {
+  margin-bottom: 0.25rem;
+  font-size: 1.125rem;
+  font-weight: var(--weight-bold);
+  color: var(--directors-accent);
+}
+
+.director-card__role {
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.director-card__toggle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
+  background-color: var(--directors-coral);
+  color: var(--directors-card);
+  font-size: 1.75rem;
+  font-weight: var(--weight-bold);
+  line-height: 1;
+  transition: background-color var(--transition-base);
+}
+
+.director-card__toggle:hover {
+  background-color: var(--directors-accent);
+}
