@@ -91,3 +91,138 @@ body {
 .director-card__toggle:hover {
   background-color: var(--directors-accent);
 }
+
+/* ---- Home page features ---- */
+.features {
+  --features-bg: #012f34;
+  --features-coral: #f67e7e;
+  --features-mint: #79c8c7;
+  --features-circle: #2c6269;
+  --features-shape: #014e56;
+
+  position: relative;
+  padding: 8.5rem 1rem 8.75rem;
+  background-color: var(--features-bg);
+  color: #ffffff;
+}
+
+.features__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  max-width: 1110px;
+  margin-inline: auto;
+}
+
+/* Left column */
+.features__line {
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-bottom: 3.75rem;
+  background-color: var(--features-coral);
+}
+
+.features__title {
+  max-width: 26rem;
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  font-weight: var(--weight-bold);
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+/* Right column */
+.features__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 3.5rem 0 0;
+  list-style: none;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.feature__icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+}
+
+.feature__icon::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--features-circle);
+}
+
+.feature__icon img {
+  position: relative;
+  z-index: 1;
+  width: 56px;
+  height: 56px;
+}
+
+.feature__title {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+  line-height: 1.4;
+  color: var(--features-coral);
+}
+
+.feature__text {
+  max-width: 27rem;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+/* Decorative shape, bottom-right corner */
+.features__shape {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 98px;
+  height: 200px;
+  background-color: var(--features-circle);
+  background-image:
+    radial-gradient(circle 30px at 100% 96px, var(--features-circle) 99%, transparent 100%),
+    radial-gradient(circle 98px at 100% 98px, var(--features-shape) 99%, transparent 100%);
+}
+
+/* horizontal stripes */
+.features__shape::before {
+  content: "";
+  position: absolute;
+  top: 98px;
+  right: 0;
+  left: 0;
+  height: 43px;
+  background: repeating-linear-gradient(
+    180deg,
+    var(--features-mint) 0 3px,
+    transparent 3px 8px
+  );
+}
+
+/* dot grid above the square */
+.features__shape::after {
+  content: "";
+  position: absolute;
+  top: -42px;
+  left: 0;
+  width: 56px;
+  height: 42px;
+  background: radial-gradient(circle, var(--features-mint) 0 2px, transparent 2.5px) 0 0 / 7px 7px;
+}
